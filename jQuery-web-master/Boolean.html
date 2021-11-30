@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+
+    <style>
+        .boolean{
+            margin:20px 0px 0px 20px;
+        }
+        h3{
+            margin-bottom: 10px;
+            color: gray;
+            font-size: 20px;
+        }
+        p{
+            line-height: 20px;
+        }
+        span{
+            color: red;
+        }
+        .boolean a{
+            text-decoration: none;
+            background-color: pink;
+            padding: 5px;
+        }
+    </style>
+    <script>
+        a = 3;
+        b = "3";
+        console.log(a == b);
+        console.log(a === b);
+        function pwd() {
+            var pwd_text = document.getElementById('pwd_text').value;
+            if (pwd_text == "123456") {
+                document.getElementById('pwd_result').innerHTML = "輸入正確";
+            } else if (pwd_text == "") {
+                document.getElementById('pwd_result').innerHTML = "內容不得為空值";
+            } else {
+                document.getElementById('pwd_result').innerHTML = "輸入錯誤(提示:數字六碼1~9)";
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="topmenu">
+                <ul>
+                    <li><a href="helloworld.html">JavaScript</a></li>
+                    <li><a href="hide_show.html">jQuery</a></li>
+                    <li><a href="css_html.html">CSS/HTML</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="sidemenu">
+                <ul>
+                    <li><a href="helloworld.html">Helloworld</a></li>
+                    <li><a href="variable.html">Variable</a></li>
+                    <li><a href="operator.html">Operator</a></li>
+                    <li><a href="Number.html">Number</a></li>
+                    <li><a href="Math.html">Math</a></li>
+                    <li><a href="String.html">String</a></li>
+                    <li><a href="Boolean.html">Boolean</a></li>
+                    <li><a href="if.html">If</a></li>
+                    <li><a href="for.html">For</a></li>
+                    <li><a href="function.html">Function</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="content">
+                <div class="boolean">
+                    <h3>密碼驗證</h3>
+                    <input type="text" placeholder="請輸入密碼" id="pwd_text">
+                    <input type="button" onclick="pwd()" value="確認">
+                    <p id="pwd_result" style="color:orange;"></p><br>
+                    <h3>比較運算子和邏輯運算子</h3>
+                    <a href="https://www.w3schools.com/jsref/jsref_operators.asp">參考連結</a>
+                    
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    // var a = true;
+    // a = false;
+    // a = !false;//not
+
+    // a = 3 > 4;
+    // //< <= == === != !== >= >
+    // var x = 5;
+    // var y = "5";
+    // var z = 3;
+    // //document.write("a=" + typeof(a) + "<br>");
+    // a = x > z;
+    // a = x == y;//true
+    // a = x === y;//false 絕對相等
+
+    // a = Boolean(1);//true
+    // a = Boolean(-1);//true
+    // a = Boolean(0);//false 非0即為true
+    // a = Boolean("abc");//true
+    // a = Boolean(" ");//true
+    // a = Boolean("");//false 非""即為true
+    // a = Boolean(undefined);//false
+    // a = Boolean(null);//false
+    // a = Boolean(NaN);//false
+
+    // x = 5;
+    // y = 0;
+    // a = x > 1 || y > 1 && x < y;//true && 優先於 ||
+    // /*
+    // a = y > 1 && x > 1;//全部為真方為真
+    // a = x > 1 && y > 1;//全部為真方為真
+    // a = x > 1 || y > 1;//任一為真即為真
+    // a = y > 1 || x > 1;//任一為真即為真
+
+    // x = 3;
+    // y = 5;
+    // a = x & y;//1
+    // a = x | y;//7*/
+
+
+    // document.write("a=" + a + "<br>");
+
+</script>

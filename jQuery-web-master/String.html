@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <style type="text/css">
+        .string {
+            margin: 20px 0px 0px 20px;
+            line-height: 20px;
+        }
+        p{
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+        function UpperCase() {
+            var text = document.getElementById('UpperCase_text').value;
+            var uppercase_text = text.toUpperCase();
+            document.getElementById('UpperCase_result').innerHTML = uppercase_text;
+        }
+        function LowerCase() {
+            var text = document.getElementById('LowerCase_text').value;
+            var lowercase_text = text.toLowerCase();
+            document.getElementById('LowerCase_result').innerHTML = lowercase_text;
+        }
+        function Length() {
+            var text = document.getElementById('length_text').value;
+            var length_text = text.length;
+            document.getElementById('length_result').innerHTML = length_text;
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="topmenu">
+                <ul>
+                    <li><a href="helloworld.html">JavaScript</a></li>
+                    <li><a href="hide_show.html">jQuery</a></li>
+                    <li><a href="css_html.html">CSS/HTML</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="sidemenu">
+                <ul>
+                    <li><a href="helloworld.html">Helloworld</a></li>
+                    <li><a href="variable.html">Variable</a></li>
+                    <li><a href="operator.html">Operator</a></li>
+                    <li><a href="Number.html">Number</a></li>
+                    <li><a href="Math.html">Math</a></li>
+                    <li><a href="String.html">String</a></li>
+                    <li><a href="Boolean.html">Boolean</a></li>
+                    <li><a href="if.html">If</a></li>
+                    <li><a href="for.html">For</a></li>
+                    <li><a href="function.html">Function</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="content">
+                <div class="string">
+                    <h3>請輸入小寫英文</h3>
+                    <input type="text" id="UpperCase_text">
+                    <input type="button" value="結果" onclick="UpperCase()">
+                    <p id="UpperCase_result" style="color:orange;"></p>
+                    <h3>請輸入大寫英文</h3>
+                    <input type="text" id="LowerCase_text">
+                    <input type="button" value="結果" onclick="LowerCase()">
+                    <p id="LowerCase_result" style="color:orange;"></p>
+                    <h3>計算字串的長度</h3>
+                    <input type="text" id="length_text">
+                    <input type="button" value="結果" onclick="Length()">
+                    <p id="length_result" style="color:orange;"></p>
+                    <p><span style="font-weight:800;">定義字串的方式:</span><br>1.用雙引號 "Hello"<br>2.用單引號 'Hello'</p>
+                    <p style="font-weight:800;">其它較常用的方法:</p>
+                    <p>charAt(x):取出字符串第x的內容</p>
+                    <p>slice(start, end):取出字符串的部分內容，但不包含end</p>
+                    <p>substring(start, end):取出字符串的部分內容，但不包含end</p>
+                    <p style="color:red;">注意: substring和slice方法的分別是slice方法不支援向前擷取子字串。
+                        意思即是如果「結束位置」是小於「開始位置」，slice方法並不會向前擷取子字串，slice方法會返回空白字串。</p>
+                    <p>indexOf(x):從字符串中查找匹配的內容</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    // var a = "Hello";
+    // a = a + ' 早安';
+    // a = "Ken's book.";
+    // a = "Ken's book which is \"The King\".";
+    // a = "ab\tcd\nefg";//\t:tab  \n:new line
+
+    // a = String(3);
+    // var b = 5;
+    // a = b.toString();
+    // document.write("a=" + typeof (a) + "<br>");
+
+    // a = "為他人減少煩惱是慈悲，為自己減少煩惱是智慧。"
+
+    // document.write("a=" + a + "<br>");
+    // document.write("a=" + a.length + "<br>");//22
+    // document.write("a=" + a.charAt(3) + "<br>");//減
+    // document.write("a=" + a.slice(2, 5) + "<br>");//人減少
+    // //人減少slice(起始號碼：包含,結束號碼：不包含)
+    // document.write("a=" + a.substring(2, 5) + "<br>");//人減少
+    // document.write("a=" + a.indexOf("減") + "<br>");//3
+    // document.write("a=" + a.indexOf("減", 0) + "<br>");//3
+    // document.write("a=" + a.indexOf("減", 4) + "<br>");//14
+    // document.write("a=" + a.indexOf("減", 15) + "<br>");//-1 not found
+    // document.write("a=" + a.indexOf("減少", 0) + "<br>");//3
+    // document.write("a=" + a.indexOf("減無", 0) + "<br>");//-1
+    // var a = "aBcD";
+    // document.write("a=" + a + "<br>");
+    // document.write("a=" + a.toUpperCase() + "<br>");
+    // document.write("a=" + a.toLowerCase() + "<br>");
+    // document.write("a=" + a.toLowerCase().indexOf("cd") + "<br>");
+</script>

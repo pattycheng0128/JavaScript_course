@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Slide show</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .outer {
+            width: 600px;
+            height: 400px;
+            margin: auto;
+        }
+
+        .outer img {
+            width: 600px;
+            height: 400px;
+            display: block;
+            position: absolute;
+        }
+
+        .dots {
+            width: 120px;
+            height: 20px;
+            margin: auto;
+            cursor: pointer;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    </script>
+    <script type="text/javascript">
+        var index = 0;
+        var photoNum = 6;
+        var delayNum = 2000;
+        var setInt = setInterval(changePhotoHandler, delayNum);
+        var fadeTime = 500;
+        $(document).ready(init);
+        function init() {
+            for (var i = 1; i <= photoNum; i++) {
+                $(".outer").append("<img src='images/photo" + i + ".jpg'>");
+                $(".dots").append("<img src='images/light.png' class='dot'>");
+            }
+            $(".outer img:gt(0)").animate({ "opacity": 0 }, 0);
+            $(".dots").width(photoNum * 20);
+            $(".dots .dot:first").attr("src", "images/dark.png");
+            $(".dot").click(changePhotoHandler);
+        }
+        function changePhotoHandler(e) {
+            console.log($(this).index());
+            if ($(this).index() != -1) {//for not click on dot
+                index = $(this).index();
+                clearInterval(setInt);
+                setInt = setInterval(changePhotoHandler, delayNum);
+            } else {
+                index++;
+            }
+            index %= photoNum;
+            $(".dots .dot").attr("src", "images/light.png");
+            $(".dots .dot:eq(" + index + ")").attr("src", "images/dark.png");
+            $(".outer img").not(".outer img:eq(" + index + ")").animate({ "opacity": 0 }, fadeTime);
+            $(".outer img:eq(" + index + ")").animate({ "opacity": 1 }, fadeTime);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="photo1"></div>
+    </div>
+    <div class="dots"></div>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <style type="text/css">
+        h3 {
+            border-bottom: 1px solid #DCDCDC;
+            margin: 30px 0px 10px 20px;
+            color: gray;
+            padding-bottom: 5px;
+            font-size: 20px;
+            font-weight: 800;
+            border-bottom: 1px solid #DCDCDC;
+        }
+
+        table,
+        p {
+            margin-left: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid gray;
+            padding: 5px;
+        }
+
+        input[type=button] {
+            background-color: pink;
+            padding: 5px;
+        }
+
+        input[type=text] {
+            background-color: rgb(223, 148, 10);
+        }
+
+        p {
+            line-height: 20px;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+    <script>
+
+        function rate() {
+            var pv = Number(document.getElementById('pv').value);
+            var rate = Number(document.getElementById('rate').value);
+            var nper = Number(document.getElementById('nper').value);
+            var fv = Math.round(pv * (1 + rate / 100) ** nper);
+            document.getElementById('fv').value = fv;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="topmenu">
+                <ul>
+                    <li><a href="helloworld.html">JavaScript</a></li>
+                    <li><a href="hide_show.html">jQuery</a></li>
+                    <li><a href="css_html.html">CSS/HTML</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="sidemenu">
+                <ul>
+                    <li><a href="helloworld.html">Helloworld</a></li>
+                    <li><a href="variable.html">Variable</a></li>
+                    <li><a href="operator.html">Operator</a></li>
+                    <li><a href="Number.html">Number</a></li>
+                    <li><a href="Math.html">Math</a></li>
+                    <li><a href="String.html">String</a></li>
+                    <li><a href="Boolean.html">Boolean</a></li>
+                    <li><a href="if.html">If</a></li>
+                    <li><a href="for.html">For</a></li>
+                    <li><a href="function.html">Function</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="content">
+                <div class="rate">
+                    <h3>計算單筆複利公式</h3>
+                    <table>
+                        <tr>
+                            <th>期初投入單筆金額</th>
+                            <th>利率(%)</th>
+                            <th>期數</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="pv" placeholder="輸入儲存的金額"></td>
+                            <td><input type="text" id="rate" placeholder="輸入5代表5%"></td>
+                            <td><input type="text" id="nper" placeholder="一年為一期"></td>
+                        </tr>
+                        <tr>
+                            <td colspan=2><input type="button" value="計算金額" onclick="rate()"></td>
+                            <td colspan=1><input type="text" id="fv">元</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <p>宣告變數的方式，在變數的前面加上<span>var</span>:<br><span>var</span> pv = 1000;<br><span>var</span> rate = 5;<br>
+                        <span>var</span> nper = 5;<br><span>var</span> fv(複利) = pv(本金) * (1+rate/100) ^ nper(投資幾年)</p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+    /*
+     * var a = 15, b = 25, c = a;
+     a = b;
+     b = c;
+     document.write("a=" + a + "<br>");
+     document.write("b=" + b + "<br>");
+
+
+     a=a+b;
+     b=a-b;
+     a=a-b;
+     c = a;
+     a = b;
+     b = c;
+     document.write("a="+a+"<br>");
+     document.write("b="+b+"<br>");
+
+
+     document.write((16 * 37 + 16 * 34 + 16 * 26) + "<br>");
+
+     var traffic = 37;
+     var food = 34;
+     var ticket = 26;
+     var people = 16;
+     document.write((people * traffic + people * food + people * ticket) + "<br>");
+
+
+    var a = 3;
+    a = 5;
+    a = "abc";
+    document.write("a=" + typeof (a) + "<br>");
+    var A = 4;
+    var a = 7;
+    var b = 8;
+    document.write("a=" + a + "<br>");
+    document.write("b=" + b + "<br>");*/
+
+        //javascript 的目的：1.快速上手 2.與java語法類似 3.能夠操控視窗元件 4.有最佳靈活性
+
+</script>

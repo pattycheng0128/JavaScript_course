@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <style type="text/css">
+        input[type=text] {
+            width: 100px;
+            height: 20px;
+            background-color: rgb(223, 148, 10);
+            margin-left: 20px;
+            margin-right: 5px;
+        }
+
+        input[type=button] {
+            width: 100px;
+            background-color: pink;
+            padding: 5px;
+        }
+
+        h3 {
+            border-bottom: 1px solid #DCDCDC;
+            margin: 30px 0px 10px 20px;
+            color: gray;
+            padding-bottom: 5px;
+            font-size: 20px;
+            font-weight: 800;
+
+        }
+
+        p {
+            margin: 20px 0px 0px 20px;
+            line-height: 20px;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+    <script>
+
+        function add() {
+            var num1 = Number(document.getElementById("add_num1").value);
+            var num2 = Number(document.getElementById("add_num2").value);
+            var sum = num1 + num2;
+            document.getElementById("add_sum").value = sum;
+        }
+        function sub() {
+            var num1 = Number(document.getElementById("sub_num1").value);
+            var num2 = Number(document.getElementById("sub_num2").value);
+            var sum = num1 - num2;
+            document.getElementById("sub_sum").value = sum;
+        }
+        function mul() {
+            var num1 = Number(document.getElementById("mul_num1").value);
+            var num2 = Number(document.getElementById("mul_num2").value);
+            var sum = num1 * num2;
+            document.getElementById("mul_sum").value = sum;
+        }
+        function div() {
+            var num1 = Number(document.getElementById("div_num1").value);
+            var num2 = Number(document.getElementById("div_num2").value);
+            var sum = num1 / num2;
+            document.getElementById("div_sum").value = sum;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="topmenu">
+                <ul>
+                    <li><a href="helloworld.html">JavaScript</a></li>
+                    <li><a href="hide_show.html">jQuery</a></li>
+                    <li><a href="css_html.html">CSS/HTML</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="sidemenu">
+                <ul>
+                    <li><a href="helloworld.html">Helloworld</a></li>
+                    <li><a href="variable.html">Variable</a></li>
+                    <li><a href="operator.html">Operator</a></li>
+                    <li><a href="Number.html">Number</a></li>
+                    <li><a href="Math.html">Math</a></li>
+                    <li><a href="String.html">String</a></li>
+                    <li><a href="Boolean.html">Boolean</a></li>
+                    <li><a href="if.html">If</a></li>
+                    <li><a href="for.html">For</a></li>
+                    <li><a href="function.html">Function</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="content">
+                <div class="operator">
+                    <h3>加法</h3>
+                    <div class="add">
+                        <input type="text" id="add_num1" placeholder="num"> +
+                        <input type="text" id="add_num2" placeholder="num"> =
+                        <input type="text" id="add_sum" placeholder="sum">
+                        <input type="button" value="計算" onclick="add()">
+                    </div>
+                    <h3>減法</h3>
+                    <div class="sub">
+                        <input type="text" id="sub_num1" placeholder="num"> -
+                        <input type="text" id="sub_num2" placeholder="num"> =
+                        <input type="text" id="sub_sum" placeholder="sum">
+                        <input type="button" value="計算" onclick="sub()">
+                    </div>
+                    <h3>乘法</h3>
+                    <div class="mul">
+                        <input type="text" id="mul_num1" placeholder="num"> x
+                        <input type="text" id="mul_num2" placeholder="num"> =
+                        <input type="text" id="mul_sum" placeholder="sum">
+                        <input type="button" value="計算" onclick="mul()">
+                    </div>
+                    <h3>除法</h3>
+                    <div class="div">
+                        <input type="text" id="div_num1" placeholder="num"> /
+                        <input type="text" id="div_num2" placeholder="num"> =
+                        <input type="text" id="div_sum" placeholder="sum">
+                        <input type="button" value="計算" onclick="div()">
+                    </div>
+                    <p>加法表達方式:<br>var a=3;<br>a = a+1;<br>a += 1;<br>a++;</p>
+                    <p>減法表達方式:<br>var a=3;<br>a = a-1;<br>a-=1;<br>a--;</p>
+                    <p>乘法表達方式:<br>var a=3;<br>a = a*2;<br>a *= 2;
+                        <p>除法表達方式:<br>var a=3;<br>a = a/2;<br>a /= 2;</p>
+                        <p>餘數表達方式:<br>var a=3;<br>a = a%3;<br>a %= 3;</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+     // var a = 3;
+            // a = a+1;
+            // a += 1;
+            // a++;
+
+            // a = a-1;
+            // a-=1;
+            // a--;
+
+            // a = a*2;
+            // a *= 2;
+            // a = a/2;
+            // a /= 2;
+
+            // a %= 3;
+            // a = a%3;//餘數
+
+            // a = 1;
+            // //a = a++ + ++a;//1 + 3
+            // document.write("a=" + a + "<br>");
+
+    /*
+    var thisisverylongvarialbe=3;
+    var thisIsVeryLongVarialbe=3;
+    thisIsVeryLongVarialbe = thisIsVeryLongVarialbe +1;
+    thisIsVeryLongVarialbe += 1;
+    thisIsVeryLongVarialbe++;
+    */
+</script>

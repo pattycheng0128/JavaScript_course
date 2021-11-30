@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+
+    <style type="text/css">
+        .function {
+            margin: 20px 0px 0px 20px;
+            line-height: 20px;
+        }
+
+        input[type=button] {
+            background-color: pink;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function call() {
+            alert("Hello world~~~~")
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="topmenu">
+                <ul>
+                    <li><a href="helloworld.html">JavaScript</a></li>
+                    <li><a href="hide_show.html">jQuery</a></li>
+                    <li><a href="css_html.html">CSS/HTML</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="sidemenu">
+                <ul>
+                    <li><a href="helloworld.html">Helloworld</a></li>
+                    <li><a href="variable.html">Variable</a></li>
+                    <li><a href="operator.html">Operator</a></li>
+                    <li><a href="Number.html">Number</a></li>
+                    <li><a href="Math.html">Math</a></li>
+                    <li><a href="String.html">String</a></li>
+                    <li><a href="Boolean.html">Boolean</a></li>
+                    <li><a href="if.html">If</a></li>
+                    <li><a href="for.html">For</a></li>
+                    <li><a href="function.html">Function</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="content">
+                <div class="function">
+                    <input type="button" value="Call me" onclick="call()">
+                    <p>Hello world~~~~</p><br>
+                    <hr>
+                    <h3>函式語法:</h3>
+                    <p>function name(parameter1, parameter2, parameter3) {<br>
+                        // code to be executed<br>
+                        }</p><br>
+                    <p>範例:</p>
+                    <p>function myFunction(a, b) {<br>
+                            return a * b;<br>
+                        }<br>
+                        console.log(myFunction(2,7))</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+    //var a = 3;
+    //document.write("a=" + a);
+    /*
+     function hello(inputName, inputTime) {
+     document.write("Hello " + inputName + ", " + inputTime + "!<br>");
+     }
+     hello("Ken", "morning");
+     hello("Mary", "evening");
+     hello("John", "night");
+
+     hello("Judy", 123);
+     hello("Judy", "Morning", 123);
+     hello("Judy");
+
+     function hello() {
+     document.write("Wow" + "!<br>");
+     }
+
+     function add(a,b) {
+     //document.write("Run!" + "<br>");
+     return a+b;
+     }
+     var a = add(3,4);
+     document.write("a=" + a + "<br>");
+     a = add(5,7);
+     document.write("a=" + a + "<br>");
+
+    var mainStr = "main String";
+    document.write("Main call mainStr: " + mainStr + "<br>");
+    function fun1() {
+        var fun1Str = "Function 1 String";
+        mainStr = "Modified";
+        document.write("fun1 call mainStr: " + mainStr + "<br>");
+        document.write("fun1 call fun1Str " + fun1Str + "<br>");
+    }
+    fun1();
+    document.write("Main call mainStr: " + mainStr + "<br>");
+    //document.write("Main call fun1Str " + fun1Str + "<br>");
+
+    function fun2() {
+        document.write("fun2 call mainStr: " + mainStr + "<br>");
+    }
+    fun2();*/
+    
+
+</script>

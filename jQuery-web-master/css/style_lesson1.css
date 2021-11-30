@@ -1,0 +1,19 @@
+h1{
+    color:pink;
+    font-size:50px;
+    text-align: center;
+    text-decoration: underline;/*下底線*/
+    border-bottom:2px solid #DCDCDC;
+}
+h2{
+    color:purple;
+}
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(236, 100, 20);
+    text-align: center;
+    text-indent:36px;
+}
+img{
+    border:2px solid #DCDCDC;
+}

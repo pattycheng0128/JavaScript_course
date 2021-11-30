@@ -1,0 +1,17 @@
+input{
+  /* display: block; */
+  background-color: pink;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+#to_do_list{
+  background-color: blue;
+  box-shadow: 5px 5px 5px gainsboro;
+  width: 300px;
+  color: white;
+}
+.todoItem{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}

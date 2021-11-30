@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+
+    <style type="text/css">
+        h3,
+        input[type=text] {
+            margin-top: 10px;
+        }
+
+        input[type=button] {
+            background-color: pink;
+            padding: 5px;
+        }
+
+        p {
+            line-height: 20px;
+        }
+    </style>
+    <script>
+        function abs() {
+            var abs_text = Math.abs(document.getElementById('abs_text').value);
+            document.getElementById('abs_result').innerHTML = abs_text
+        }
+        function pow() {
+            var x = document.getElementById('pow_text1').value;
+            var y = document.getElementById('pow_text2').value;
+            var pow_text = Math.pow(x, y);
+            document.getElementById('pow_result').innerHTML = pow_text
+        }
+        function random() {
+            var max_num = document.getElementById('random_text').value;
+            var random_text = Math.floor(Math.random() * max_num);
+            document.getElementById('random_result').innerHTML = random_text
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="topmenu">
+                <ul>
+                    <li><a href="helloworld.html">JavaScript</a></li>
+                    <li><a href="hide_show.html">jQuery</a></li>
+                    <li><a href="css_html.html">CSS/HTML</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="sidemenu">
+                <ul>
+                    <li><a href="helloworld.html">Helloworld</a></li>
+                    <li><a href="variable.html">Variable</a></li>
+                    <li><a href="operator.html">Operator</a></li>
+                    <li><a href="Number.html">Number</a></li>
+                    <li><a href="Math.html">Math</a></li>
+                    <li><a href="String.html">String</a></li>
+                    <li><a href="Boolean.html">Boolean</a></li>
+                    <li><a href="if.html">If</a></li>
+                    <li><a href="for.html">For</a></li>
+                    <li><a href="function.html">Function</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="content">
+                <div class="math">
+                    <h3>Math.abs(x);//絕對值</h3>
+                    <input type="text" placeholder="請輸入負數" id="abs_text">
+                    <input type="button" value="結果" onclick="abs()">
+                    <p id="abs_result" style="color:orange;"></p>
+
+                    <h3>Math.pow(x, y);//次方</h3>
+                    <input type="text" placeholder="請輸入x" id="pow_text1">
+                    <input type="text" placeholder="請輸入y" id="pow_text2">
+                    <input type="button" value="結果" onclick="pow()">
+                    <p id="pow_result" style="color:orange;"></p>
+
+                    <h3>Math.random(x);//亂數</h3>
+                    <input type="text" placeholder="在範圍內隨機存取數值" id="random_text">
+                    <input type="button" value="結果" onclick="random()">
+                    <p id="random_result" style="color:orange;"></p>
+                    <p>Math.sqrt(4);//開根號</p>
+                    <p>Math.round(3.3);//四捨五入</p>
+                    <p>Math.ceil(3.3);//無條件進位</p>
+                    <p>Math.floor(3.7);//無條件捨去</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    // var a = 3;
+    // a = 1 + 2 * 3 - 4;
+    // a = 1 + (2 * 3) - 4;
+    // a = Math.abs(-5);//絕對值
+
+    // a = Math.pow(2, 3);//次方 Math.pow(底,指)
+    // a = Math.sqrt(9);//開根號
+
+    // a = Math.random();//0<=?<1 亂數
+    // a = Math.random() * 10;//0<=?<1
+
+    // a = Math.round(3.3);//四捨五入
+    // a = Math.ceil(3.3);//無條件進位
+    // a = Math.floor(3.7);//無條件捨去
+
+    // a = Math.round(3.3487 * 100) / 100;
+
+    // //alert("floor:"+Math.floor(-3.7));
+    // //alert("parseInt:"+parseInt(-3.7));
+    // //83s
+    // var sec = 83;
+    // var min = parseInt(sec / 60);
+    // sec = sec % 60;
+    // document.write(min + "分" + sec + "秒<br>");
+
+    // sec = 83;
+    // document.write(parseInt(sec / 60) + "分" + (sec % 60) + "秒<br>");
+
+    // a = Math.floor(Math.random() * 6) + 1;//0<=?<6
+    // document.write("a=" + a + "<br>");
+
+</script>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+
+    <style>
+        .if{
+            margin: 20px 0px 0px 20px;
+        }
+        h3{
+            color: gray;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        input[type=text]{
+            background-color: orange;
+            padding: 5px;
+        }
+        input[type=button]{
+            background-color:pink;
+            padding: 5px;
+        }
+        p{
+            line-height: 25px;
+        }
+    </style>
+    <script>
+        function year_test() {
+            var ans = document.getElementById('yaer_text').value;
+            if (ans > 0 && ans == Math.floor(ans)) {
+                if (ans % 4 == 0 && ans % 100 != 0 || ans % 400 == 0) {
+                    document.getElementById('year_result').innerHTML = "是閏年"
+                } else {
+                    document.getElementById('year_result').innerHTML = "是平年"
+                }
+            } else {
+                document.getElementById('year_result').innerHTML = "您輸入錯誤"
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="topmenu">
+                <ul>
+                    <li><a href="helloworld.html">JavaScript</a></li>
+                    <li><a href="hide_show.html">jQuery</a></li>
+                    <li><a href="css_html.html">CSS/HTML</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="sidemenu">
+                <ul>
+                    <li><a href="helloworld.html">Helloworld</a></li>
+                    <li><a href="variable.html">Variable</a></li>
+                    <li><a href="operator.html">Operator</a></li>
+                    <li><a href="Number.html">Number</a></li>
+                    <li><a href="Math.html">Math</a></li>
+                    <li><a href="String.html">String</a></li>
+                    <li><a href="Boolean.html">Boolean</a></li>
+                    <li><a href="if.html">If</a></li>
+                    <li><a href="for.html">For</a></li>
+                    <li><a href="function.html">Function</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="content">
+                <div class="if">
+                    <h3>判斷年份是否為潤年</h3>
+                    <input type="text" id="yaer_text">
+                    <input type="button" onclick="year_test()" value="確認">
+                    <p id="year_result" style="color:orange;"></p><br>
+                    <h3>if_else語法:</h3>
+                    <p>if (condition1) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block of code to be executed if condition1 is true<br>
+                        } else {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block of code to be executed if the condition1 is false and condition2 is false
+                        }</p>
+                    <hr>
+                    <h3>if_else if_else語法:</h3>
+                    <p>if (condition1) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block of code to be executed if condition1 is true<br>
+                        } else if (condition2) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block of code to be executed if the condition1 is false and condition2 is true<br>
+                        } else {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block of code to be executed if the condition1 is false and condition2 is false
+                        }</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+    /*
+     if(false){
+     document.write("True" + "<br>");
+     }else{
+     document.write("False" + "<br>");
+     }
+     document.write("End" + "<br>");
+     */
+    //alert("Alert!");
+    //var ans = confirm("Confirm!");
+    /*
+     var ans = prompt("Please input an integer!");
+     document.write("ans=" +ans+ "<br>");
+     document.write("ans=" +typeof(ans)+ "<br>");
+     if (ans != 0 && ans == Math.floor(ans)) {
+     if (ans % 2 == 0) {
+     document.write("Even" + "<br>");
+     } else {
+     document.write("Odd" + "<br>");
+     }
+     }else{
+     document.write("Error" + "<br>");
+     }
+     var score = 85;
+     if (score >= 90) {
+     document.write("A" + "<br>");
+     } else if (score >= 80) {
+     document.write("B" + "<br>");
+     }
+    var ans = prompt("Please input an year!");
+    if (ans > 0 && ans == Math.floor(ans)) {
+        if (ans%4==0 && ans%100!=0 || ans%400==0) {
+            document.write("閏" + "<br>");
+        } else {
+            document.write("平" + "<br>");
+        }
+    } else {
+        document.write("Error" + "<br>");
+    }*/
+
+</script>

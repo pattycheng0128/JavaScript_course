@@ -1,0 +1,230 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Patty*/
+
+.wrap{
+    width:1200px;
+    margin:0 auto;
+    margin-top:20px; 
+}
+
+.topmenu{
+    background-color: #D3D3D3;
+}
+.topmenu a{
+    float: right;
+    text-decoration: none;
+}
+.topmenu img{
+    height: 30px;
+    float: right;
+    padding-left:10px;
+    padding-right:10px;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+.nav{
+    margin-bottom: 10px;
+}
+ .nav ul{
+     float:right;
+ }
+
+ .nav li{
+    float: left;
+    margin-top:10px;
+    margin-right:20px;
+    line-height: 90px;
+    
+}
+.nav h1 a{
+    float: left;
+    background-image: url(../images/logo.png);
+    width:259px;
+    height: 55px;
+    display: block;
+    text-indent: 101%;
+    overflow:hidden;
+    white-space: nowrap;
+    margin-top:35px;
+}
+
+.nav li a{
+    text-decoration:none;
+    color:#41B399;
+    display: block;
+    padding:10px;
+
+}
+.nav li a:hover{
+    color:#9ACD32;
+}
+.nav li a:active{
+    color:#00BFFF;
+}
+/*滿版圖*/
+.content img{
+    width:1200px;
+}
+/*3張圖的版型*/
+.list{
+    
+    margin: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.list img{
+    width: 100%;
+}
+.list_li{
+    box-sizing: border-box;
+    float: left;
+    width:300px;
+    height: 300px;
+    margin-top:50px;
+    margin-right:50px;
+    margin-left: 50px;
+    padding:20px;
+    box-shadow: 5px 5px 20px gray;
+}
+
+.list h2{
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.list_span span{
+    margin-left:60px;
+}
+.list_span li{
+    margin-left:80px;
+}
+
+/*table的設定*/
+
+.table_item table{
+    width: 900px;
+    margin:0 auto;
+}
+
+.table_item h2{
+    font-size:30px;
+    text-align: center;
+    margin-top:60px;
+    margin-bottom:30px;
+}
+
+.table_item th,td{
+    border-bottom: 2px solid #DCDCDC;
+    text-align: center;
+    padding:5px;
+    font-family:sans-serif;
+    font-weight: 300;
+}
+.table_item th{
+    background-color: #DCDCDC;
+    font-weight: bold;
+}
+.changed_color{
+    color:#41B399;
+}
+.container{
+    background-image: linear-gradient(to bottom,#00684F,#009570);
+    margin-top:100px;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+}
+.container h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 60px;
+    padding-top:30px;
+}
+textarea{
+    margin-left: 40px;
+    float: left;
+    width:500px;
+    height: 220px;
+    border-radius:10px;
+}
+
+.formCourse label,input[type=text],input[type=phone],input[type=email]{
+    float: right;
+    margin-top:10px;
+    margin-right: 100px;
+    width: 500px;
+    height: 20px;
+    border-radius:5px;
+}
+.formCourse input[type=submit]{
+    float: right;
+    margin-top:10px;
+    margin-right: 100px;
+    background-color: #45C99F;
+    padding:5px 20px;
+    color:white;
+}
+.formCourse input[type=submit]:hover{
+    background-color:#008B8B;
+    cursor:pointer;
+}
+
+.clearfix{
+    clear: both;
+}
+.footer{
+    margin-top:10px;
+}
+.span_merge{
+    float: right;
+    margin-right: 20px;
+    margin-bottom:5px;
+    color:#FF1493;
+    white-space: pre;
+}

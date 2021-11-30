@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <title>Slide show</title>
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0;
+            }
+			.outer{
+				width:600px;
+				height:400px;
+				margin:auto;
+				position:relative;
+			}
+			.outer img{
+				width:600px;
+				height:400px;
+				display:block;
+				position:absolute;
+			}
+			.dots{
+				width:120px;
+				height:20px;
+				margin:auto;
+				cursor:pointer;
+			}
+			.leftBtn,.rightBtn{
+				width:60px;
+				height:400px;
+				background:url(images/leftBtn.png);
+				position:absolute;
+				display:none;
+				left:0px;
+				top:0px;
+				cursor:pointer;
+				opacity:0.5;
+			}
+			.rightBtn{
+				background:url(images/rightBtn.png);
+				left:540px;
+			}
+ 			.leftBtn:hover,.rightBtn:hover{
+				opacity:1;
+			}
+       </style>
+        <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+        </script>
+		<script type="text/javascript">
+			var linkAr=["google","apple","bmw","yahoo","canon","nikon"];
+			var index = 0;
+			var photoNum = 6;
+			var setInt = setInterval(changePhotoHandler, 2000);
+            $(document).ready(init);
+            function init(){
+				for (var i = 1; i<=photoNum; i++){
+					$(".outer").append("<img src='images/photo"+i+".jpg'>");
+					$(".dots").append("<img src='images/light.png' class='dot'>");
+				}
+				$(".outer").append("<div class='leftBtn'>");
+				$(".outer").append("<div class='rightBtn'>");
+				$(".leftBtn,.rightBtn").click(btnHandler);
+				$(".outer img:gt(0)").animate({"opacity":0},0);
+				$(".outer img").click(linkHandler);
+				$(".outer").hover(hoverHandler);
+				$(".dots").width(photoNum*20);
+				$(".dots .dot:first").attr("src","images/dark.png");
+				$(".dot").click(changePhotoHandler);
+            }
+			function hoverHandler(){
+				$(".leftBtn,.rightBtn").fadeToggle(300);
+			}
+			function btnHandler(){
+				if($(".outer div").index($(this))==0){
+					index-=2;
+				}
+				changePhotoHandler();
+			}
+			function changePhotoHandler(e){
+				//console.log($(this).index());
+				if($(this).index()!=-1){//for not click on dot
+					index=$(this).index();//this => dot
+				}else{
+					index++;//this => window
+				}
+				clearInterval(setInt);
+				setInt = setInterval(changePhotoHandler, 2000);
+				index%=photoNum;
+				//console.log(index);
+				$(".dots .dot").attr("src","images/light.png");
+				$(".dots .dot:eq("+index+")").attr("src","images/dark.png");
+				$("img:animated").stop();
+				//$(".outer img").not(".outer img:eq("+index+")").animate({"opacity":0},500);
+				$(".outer img:not(img:eq("+index+"))").animate({"opacity":0},500);
+				$(".outer img:eq("+index+")").animate({"opacity":1},500);
+			}
+			function linkHandler(){
+				window.location.href="http://www."+linkAr[index]+".com";
+			}
+	        </script>        
+    </head>
+    <body>
+        <div class="outer"></div>
+        <div class="dots"></div>
+    </body>
+</html>

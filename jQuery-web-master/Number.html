@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <style type="text/css">
+        h3,input[type=text],input[type=button] {
+            margin-top: 10px;
+        }
+
+        span {
+            color: red;
+        }
+
+        p {
+            line-height: 20px;
+        }
+        .number{
+            margin:20px 0px 0px 20px;
+        }
+        h3{
+            color: gray;
+            font-size: 20px;
+            border-bottom: 1px solid #DCDCDC;
+            padding-bottom: 10px;
+        }
+    </style>
+    <script>
+        function result() {
+            var num = parseInt(document.getElementById('num').value);
+            if (Math.round(num) > 0 || Math.round(num) < 0) {
+                var result = document.getElementById('demo').innerHTML = ("是數字或浮點數");
+            } else {
+                var result = document.getElementById('demo').innerHTML = ("是字串");
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="topmenu">
+                <ul>
+                    <li><a href="helloworld.html">JavaScript</a></li>
+                    <li><a href="hide_show.html">jQuery</a></li>
+                    <li><a href="css_html.html">CSS/HTML</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="sidemenu">
+                <ul>
+                    <li><a href="helloworld.html">Helloworld</a></li>
+                    <li><a href="variable.html">Variable</a></li>
+                    <li><a href="operator.html">Operator</a></li>
+                    <li><a href="Number.html">Number</a></li>
+                    <li><a href="Math.html">Math</a></li>
+                    <li><a href="String.html">String</a></li>
+                    <li><a href="Boolean.html">Boolean</a></li>
+                    <li><a href="if.html">If</a></li>
+                    <li><a href="for.html">For</a></li>
+                    <li><a href="function.html">Function</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="content">
+                <div class="number">
+                    <h3>判斷輸入為數值還是字串</h3>
+                    <input type="text" id="num">
+                    <input type="button" id="result" value="輸出" onclick="result()">
+                    <p id="demo" style="color: orange;"></p>
+                    <p>可以在變數前面定義是整數或浮點數:<br>var a = <span>Number</span>(5.5)</p>
+                    <hr>
+                    <p>關於轉型typeof():<br>parseInt:轉型為整數<br>parseFloat:轉型為浮點數</p>
+                    <span>注意:在網頁上顯示的任何內容都是字串，所以做數值運算時，記得要轉型</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+    var a = 3;//3
+    a = 3.3;
+    a = -3.3;
+
+    a = Number("3.3");//3,3
+    //document.write("a=" + typeof(a) + "<br>");
+    a = Number("3.3a");//NaN : Not a Number
+    a = Number("a3.3");//NaN : Not a Number
+    a = Number("");//0
+    a = Number(" 3.3 ");//3.3
+    a = Number(undefined);//NaN : Not a Number
+    a = Number(NaN);//NaN : Not a Number
+    a = Number(null);//0
+    console.log(typeof (Number(" 3.3 ")))
+
+    a = parseFloat("3.3");//3,3
+    a = parseFloat("3.3a");//3.3
+    a = parseFloat("a3.3");//NaN : Not a Number
+    a = parseFloat("");//NaN : Not a Number
+    a = parseFloat(" 3.3 ");//3.3
+    a = parseFloat(undefined);//NaN : Not a Number
+    a = parseFloat(NaN);//NaN : Not a Number
+    a = parseFloat(null);//NaN : Not a Number
+
+    a = parseInt("3.3");//3
+    a = parseInt("3.3a");//3
+    a = parseInt("a3.3");//NaN : Not a Number
+    a = parseInt("");//NaN : Not a Number
+    a = parseInt(" 3.3 ");//3
+    a = parseInt(undefined);//NaN : Not a Number
+    a = parseInt(NaN);//NaN : Not a Number
+    a = parseInt(null);//NaN : Not a Number
+
+    a = 31;//31 //10進位
+    a = 031;//25 //8進位
+    a = 0x31;//49 //16進位
+    a = 0x00ff00;
+    a = 65535 - 255;
+        // document.write("a=" + a + "<br>");
+</script>
