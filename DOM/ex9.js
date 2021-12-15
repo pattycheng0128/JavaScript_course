@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded",
   // 也可以在外層綁事件(Event delegation 委任)
   // close 功能
   container.addEventListener("click", (e) => {
-    // console.log(e.target.nodeName);
+    console.log(e.target.nodeName);
     if(e.target && e.target.nodeName == "BUTTON"){
       e.target.parentNode.remove();
     }
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded",
     const color = randomHex();
     const note = document.createElement("div");
     // note.innerText = "hi";
-    note.innerText = `#${color}`;
+    note.innerText = "hi";
     note.className = "bar";
     const constainer = document.querySelector(".container");
     constainer.insertAdjacentElement("afterbegin", note);
